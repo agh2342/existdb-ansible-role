@@ -36,6 +36,7 @@ Version 1.0-SNAPSHOT (May 27 2020)
 * make maven options configurable (add 'exist_mvn_options')
 * delete '/db/system/config/db/collection.xconf' during installation
 * disable restxq autostart (add 'exist_confxml_trigger_restxq_enable')
+* ability to "live"-patch xars by adding attributes to 'xar_install', see 'exist_xar_' and 'exist_replication_'
 
 ## Incompatibilities with Earlier Versions
 
