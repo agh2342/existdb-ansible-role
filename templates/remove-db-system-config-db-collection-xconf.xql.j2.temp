@@ -1,0 +1,19 @@
+xquery version "3.1";
+
+(:
+<collection xmlns="http://exist-db.org/collection-config/1.0">
+    <triggers>
+        <trigger class="org.exist.extensions.exquery.restxq.impl.RestXqTrigger"/>
+    </triggers>
+</collection>
+:)
+
+(:
+declare namespace xns="http://exist-db.org/collection-config/1.0";
+
+for $trigger in doc("/db/system/config/db/collection.xconf")/xns:collection/xns:triggers/xns:trigger
+where $trigger/@class != ""
+return ($trigger,("update delete $trigger"))
+:)
+
+if (util:document-id("/db/system/config/db/collection.xconf")) then ((<item1/>, xmldb:remove("/db/system/config/db","collection.xconf"))) else (<item2/>)

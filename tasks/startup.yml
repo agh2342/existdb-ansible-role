@@ -163,7 +163,7 @@
     path: "{{ exist_path }}/{{ item }}"
     state: absent
   with_items:
-    - set-adminpass.xql
+#    - set-adminpass.xql
     - users-and-groups.xql
     - install-xars.xql
     - collection-autostart.xql
