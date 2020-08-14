@@ -232,6 +232,7 @@ exist_replication_trigger_template: |
       <parameter name="java.naming.factory.initial" value="org.apache.activemq.jndi.ActiveMQInitialContextFactory"/>
       <parameter name="java.naming.provider.url" value="failover:tcp://{{ exist_replication_host }}:{{ exist_replication_port }}"/>
       <parameter name="connection-factory" value="ConnectionFactory"/>
+      <!-- <parameter name="destination" value="{{ exist_replication_destination }}-{{ item.src_archive_name|default('CHANGEME') }}"/> -->
       <parameter name="destination" value="{{ exist_replication_destination }}"/>
     </trigger>
   </triggers>
